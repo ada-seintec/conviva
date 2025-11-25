@@ -1,0 +1,320 @@
+/* Definição das Cores */
+:root {
+    --color-primary-dark: #872352; /* Bordô Principal (Títulos, Fundo Footer) */
+    --color-primary-light: #BC2363; /* Vinho/Rosa (Destaque Secundário) */
+    --color-secondary: #D07607; /* Ouro/Laranja (Destaque nos Ícones/Bordas) */
+    --color-contrast-soft: #1B6E99; /* Azul/Ciano Escuro (Fundo do Header) */
+    --color-text-body: #333333; /* Cinza Escuro para Melhor Legibilidade */
+    --color-background-light: #fef8ff; 
+}
+
+/* Base e Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #eaf3f8; 
+    color: var(--color-text-body);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Alinhamento Justificado para Parágrafos */
+main p {
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+/* Header/Hero Section */
+.hero {
+    background-color: var(--color-contrast-soft); 
+    color: white;
+    padding: 25px 0 35px 0; 
+    text-align: center;
+    border-bottom: 5px solid var(--color-secondary); 
+}
+
+.logo-conviva {
+    max-width: 200px; 
+    height: auto;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.hero h1 {
+    font-size: 2.2em; 
+    margin-bottom: 5px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.hero h2 {
+    font-size: 1.3em; 
+    font-weight: 300;
+    margin-bottom: 0; 
+    color: white; 
+}
+
+.introduction {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center; 
+}
+
+/* Seções de Conteúdo */
+.content-section {
+    background: #ffffff;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    border-top: 3px solid var(--color-primary-dark); 
+}
+
+.section-title {
+    font-size: 1.8em;
+    color: var(--color-primary-dark); 
+    border-bottom: 2px solid var(--color-primary-light); 
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.section-title i {
+    margin-right: 10px;
+    color: var(--color-secondary); 
+}
+
+/* Estilo para Subtítulos e Listas de Objetivos */
+.subsection-title {
+    font-size: 1.4em;
+    color: var(--color-primary-dark);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.conviva-objectives {
+    list-style-type: none;
+    padding-left: 0;
+    text-align: justify;
+}
+
+.conviva-objectives li {
+    padding-left: 2em; 
+    text-indent: -1.5em; 
+    margin-bottom: 8px;
+    font-size: 1em;
+}
+
+.conviva-objectives li:before {
+    content: "\f00c"; 
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900; 
+    color: var(--color-secondary); 
+    display: inline-block;
+    width: 1.5em;
+}
+/* FIM: Estilo para Subtítulos e Listas de Objetivos */
+
+
+/* Lista de Documentos (GRID RESPONSIVO) */
+.document-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 15px;
+}
+
+.document-link {
+    display: block;
+    padding: 15px 20px;
+    background-color: #f1f8fc; 
+    color: var(--color-contrast-soft); 
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-weight: bold;
+    border-left: 5px solid var(--color-secondary); 
+}
+
+.document-link:hover {
+    background-color: #d1e5f0; 
+    transform: translateY(-2px);
+    color: var(--color-contrast-soft);
+}
+
+/* Footer/Contato */
+footer {
+    background-color: var(--color-primary-dark); 
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer h4 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    color: var(--color-secondary); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer h4 i {
+    margin-right: 10px;
+}
+
+/* NOVO: Estilo para o email no rodapé */
+.email-info {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.email-info i {
+    color: var(--color-secondary); /* Ícone de envelope em Laranja/Ouro */
+    margin-right: 5px;
+}
+/* FIM: Estilo para o email no rodapé */
+
+
+.contact-info p {
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+.contact-info strong {
+    color: #f0f0f0;
+}
+
+/* Estilo do Botão Voltar ao Topo */
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: var(--color-secondary); 
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#scrollToTopBtn:hover {
+    background-color: var(--color-primary-light);
+    transform: scale(1.05);
+}
+
+/* RESPONSIVIDADE (Media Query) */
+@media (max-width: 768px) {
+    .hero {
+        padding: 20px 0 25px 0; 
+    }
+    .logo-conviva {
+        max-width: 180px;
+        margin-bottom: 10px;
+    }
+    .hero h1 {
+        font-size: 1.8em;
+    }
+    .hero h2 {
+        font-size: 1.1em;
+        color: white; 
+    }
+    .content-section {
+        padding: 20px;
+    }
+    .section-title {
+        font-size: 1.6em;
+    }
+    .document-list {
+        grid-template-columns: 1fr; 
+    }
+    .document-link {
+        padding: 12px 15px;
+    }
+    #scrollToTopBtn {
+        bottom: 20px;
+        right: 20px;
+        padding: 12px;
+        font-size: 16px;
+    }
+}
+
+/*--------------------------------------------------*/
+/* ESTILOS PARA CARDS DE DOCUMENTO (PROTOCOLO / RONDA) */
+/*--------------------------------------------------*/
+.card-list {
+    display: grid;
+    /* Define 2 colunas para os cards em telas maiores */
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.document-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    height: 100%; /* Garante que os cards tenham a mesma altura */
+}
+
+.document-card:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.card-image {
+    width: 100%;
+    flex-grow: 1;
+    max-height: 250px;
+    object-fit: contain; /* Garante que a imagem caiba inteira sem ser cortada */
+    border-bottom: 3px solid var(--color-secondary);
+    padding: 10px; 
+}
+
+.card-title {
+    color: var(--color-primary-dark);
+    font-size: 1.1em;
+    padding: 15px 10px;
+    margin: 0;
+    width: 100%;
+    background-color: #f7f7f7;
+    font-weight: bold;
+    flex-shrink: 0; /* Garante que o título permaneça fixo na parte inferior */
+}
+
+/* Ajuste Responsivo para Cards */
+@media (max-width: 768px) {
+    .card-list {
+        grid-template-columns: 1fr; /* 1 card por linha no mobile */
+    }
+    .card-image {
+        height: auto;
+        max-height: 200px;
+    }
+}
